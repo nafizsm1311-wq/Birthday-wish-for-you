@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#32113f">
+<title>শুভ জন্মদিন মিতু 🎂</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;min-height:100vh;overflow-x:hidden;
+ text-align:center;color:#fff4fc;
+ font-family:system-ui,"Noto Sans Bengali",sans-serif;
+ background:radial-gradient(ellipse at top,#754080,#32113f 48%,#12091e);
+}
+body:before{
+ content:"";position:fixed;inset:0;pointer-events:none;
+ background-image:radial-gradient(#fff 1px,transparent 1.5px),
+ radial-gradient(#ffd7f0 1px,transparent 1.5px);
+ background-size:43px 43px,67px 67px;
+ animation:stars 14s linear infinite;opacity:.5;
+}
+@keyframes stars{to{background-position:43px 86px,67px 134px}}
+main{position:relative;max-width:650px;margin:auto;padding:20px 14px 40px}
+.ribbon{font-size:65px;animation:sway 2s infinite ease-in-out}
+@keyframes sway{50%{transform:rotate(8deg)}}
+h1{
+ color:#ffd5ee;font-size:clamp(30px,8vw,48px);
+ text-shadow:0 0 12px #ff4fa0,0 0 25px #d34fc8;
+ margin:8px 0;
+}
+p{line-height:1.9}
+.intro{color:#ffe5f4}
+.scene{
+ position:relative;margin:22px auto;padding:18px 8px 25px;
+ border:1px solid #ffc8ed88;border-radius:25px;
+ background:#ffffff0c;box-shadow:0 0 35px #ff7acb25;
+}
+.spark{position:absolute;color:#ffe7a6;font-size:27px;
+ animation:twinkle 1.3s infinite alternate}
+.s1{top:15px;left:9%}.s2{top:35px;right:9%}
+.s3{bottom:50px;left:8%}.s4{bottom:60px;right:8%}
+@keyframes twinkle{to{transform:scale(1.5) rotate(25deg);opacity:.4}}
+.cake-area{height:245px;position:relative;display:flex;
+ align-items:flex-end;justify-content:center;padding-bottom:25px}
+.plate{
+ position:absolute;bottom:15px;width:80%;height:22px;
+ border-radius:50%;background:linear-gradient(#fff,#d9a5dc,#9959a7);
+ box-shadow:0 7px 15px #0008;
+}
+.cake{
+ position:relative;z-index:2;width:220px;height:105px;
+ margin-bottom:28px;border-radius:13px 13px 22px 22px;
+ background:linear-gradient(90deg,#ed8dc5,#ffe4f3 35%,#ee8cc7);
+ box-shadow:inset 0 -12px #c4559e,0 8px 15px #0005;
+ transition:transform .8s;
+}
+.cake:before{
+ content:"";position:absolute;top:-12px;left:-3px;right:-3px;
+ height:25px;border-radius:50%;background:#fff1f8;
+ border-bottom:5px dotted #ff70b9;
+}
+.cake:after{
+ content:"♡  ♡  ♡";position:absolute;top:42px;left:0;right:0;
+ color:#b43c84;font-size:23px;
+}
+.cake-label{
+ position:absolute;z-index:4;bottom:48px;color:#772658;
+ font-weight:bold;font-size:16px;
+}
+.candles{
+ position:absolute;z-index:3;bottom:148px;display:flex;gap:16px;
+}
+.candle{
+ position:relative;width:10px;height:45px;border-radius:4px;
+ background:repeating-linear-gradient(135deg,#fff 0 5px,#ff72b7 5px 10px);
+}
+.flame{
+ position:absolute;top:-17px;left:1px;width:8px;height:14px;
+ border-radius:70% 30% 60% 40%;
+ background:linear-gradient(#fff6a5,#ff9d36);
+ box-shadow:0 0 14px #ffbf49;
+ animation:flicker .45s infinite alternate;
+}
+@keyframes flicker{to{transform:rotate(9deg) scale(.8)}}
+.cake-cut .cake{transform:rotate(-7deg) translateX(-8px) scale(.96)}
+.cake-cut .cake:after{content:"✨ Mitu ✨";font-size:16px}
+.cake-cut .flame{opacity:0;transition:.3s}
+.buttons{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+button{
+ font-family:inherit;font-size:15px;font-weight:bold;
+ border:0;border-radius:30px;padding:13px 18px;
+ color:#541643;background:linear-gradient(135deg,#ffe7f5,#ff8bc8);
+ box-shadow:0 5px #a43d7d,0 8px 15px #0003;cursor:pointer;
+}
+button:active{transform:translateY(3px);box-shadow:0 2px #a43d7d}
+.gold{background:linear-gradient(135deg,#fff1c2,#ffc86d);box-shadow:0 5px #a76d34}
+.letter{
+ display:none;margin:22px auto;padding:22px 18px;
+ max-width:540px;text-align:left;color:#672552;
+ background:linear-gradient(145deg,#fff6fb,#ffd8ec);
+ border:2px solid #fff8;border-radius:20px;
+ box-shadow:0 10px 30px #0005;line-height:2;
+}
+.letter.show{display:block;animation:open .6s ease}
+.letter h2{text-align:center;color:#a62c78}
+.sign{text-align:right;font-weight:bold;color:#a62c78}
+@keyframes open{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+.float{
+ position:fixed;bottom:-40px;z-index:10;pointer-events:none;
+ animation:rise 4s linear forwards;
+}
+@keyframes rise{to{transform:translateY(-110vh) rotate(35deg);opacity:0}}
+.confetti{
+ position:fixed;top:-15px;width:9px;height:13px;z-index:11;
+ pointer-events:none;animation:fall 3s linear forwards;
+}
+@keyframes fall{to{transform:translateY(110vh) rotate(650deg);opacity:.2}}
+footer{margin-top:25px;font-size:13px;color:#f4cce8}
+@media(max-width:380px){.cake{width:185px}.candles{gap:13px}}
+</style>
+</head>
+
+<body>
+<main>
+ <div class="ribbon">🎀</div>
+ <div>✨ একটি ছোট্ট রূপকথার জগৎ ✨</div>
+ <h1>শুভ জন্মদিন, মিতু! 💖</h1>
+ <p class="intro">
+  আজকের দিনটা হোক তোমার মতোই সুন্দর! 🌷<br>
+  তোমার জন্য আছে একটি ছোট্ট জাদুকরি সারপ্রাইজ। 🧚‍♀️
+ </p>
+
+ <section class="scene">
+  <span class="spark s1">✦</span>
+  <span class="spark s2">✧</span>
+  <span class="spark s3">✦</span>
+  <span class="spark s4">✧</span>
+
+  <div class="cake-area" id="cakeArea">
+   <div class="candles">
+    <span class="candle"><i class="flame"></i></span>
+    <span class="candle"><i class="flame"></i></span>
+    <span class="candle"><i class="flame"></i></span>
+    <span class="candle"><i class="flame"></i></span>
+    <span class="candle"><i class="flame"></i></span>
+   </div>
+   <div class="cake"></div>
+   <div class="cake-label">Happy Birthday, Mitu ♡</div>
+   <div class="plate"></div>
+  </div>
+
+  <p>🌹 গোলাপ • 🎀 রিবন • ✨ জাদুর ঝিলিক</p>
+ </section>
+
+ <div class="buttons">
+  <button id="cutBtn">🎂 কেক কাটো!</button>
+  <button class="gold" id="letterBtn">💌 চিঠি খোলো</button>
+  <button id="magicBtn">✨ জাদু ছড়াও!</button>
+ </div>
+
+ <section class="letter" id="letter">
+  <h2>💌 শুধু তোমার জন্য, মিতু</h2>
+  <p>প্রিয় মিতু, 🌷</p>
+  <p>
+   শুভ জন্মদিন! 🎂💖 তোমার জীবনের প্রতিটি সকাল নিয়ে আসুক
+   নতুন আশা, প্রতিটি দিন ভরে উঠুক আনন্দে, আর তোমার সুন্দর
+   স্বপ্নগুলো একে একে সত্যি হোক।
+  </p>
+  <p>
+   তোমার মুখের হাসি সবসময় এমনই উজ্জ্বল থাকুক।
+   মন ভালো করা মুহূর্ত, সুন্দর স্মৃতি আর সাফল্যে ভরে উঠুক
+   তোমার আগামী দিনগুলো। আজকের দিনটা হোক এক রূপকথার মতো—
+   মায়াবী, আনন্দময় আর স্মরণীয়! 🧚‍♀️🌸
+  </p>
+  <p>
+   অনেক অনেক শুভকামনা রইল তোমার জন্য।
+   কেক, হাসি আর আনন্দে ভরে উঠুক তোমার বিশেষ দিন। 🎀
+  </p>
+  <p class="sign">— নাফিজের পক্ষ থেকে ❤️</p>
+ </section>
+
+ <footer>Made with 💗 and a little fairy-tale magic, just for Mitu</footer>
+</main>
+
+<script>
+const cakeArea=document.getElementById("cakeArea");
+const cutBtn=document.getElementById("cutBtn");
+const letter=document.getElementById("letter");
+const letterBtn=document.getElementById("letterBtn");
+
+function hearts(count=20){
+ const icons=["💗","💖","💕","🌸","✨","🌷"];
+ for(let i=0;i<count;i++){
+  const el=document.createElement("span");
+  el.className="float";
+  el.textContent=icons[Math.floor(Math.random()*icons.length)];
+  el.style.left=Math.random()*96+"vw";
+  el.style.fontSize=(18+Math.random()*20)+"px";
+  el.style.animationDuration=(3+Math.random()*2)+"s";
+  document.body.appendChild(el);
+  el.addEventListener("animationend",()=>el.remove(),{once:true});
+ }
+}
+
+function confetti(count=100){
+ const colors=["#ff6eb6","#ffe49b","#cba5ff","#fff","#ff9b8d","#9ff5e0"];
+ for(let i=0;i<count;i++){
+  const el=document.createElement("i");
+  el.className="confetti";
+  el.style.left=Math.random()*100+"vw";
+  el.style.background=colors[Math.floor(Math.random()*colors.length)];
+  el.style.animationDelay=Math.random()*.7+"s";
+  el.style.animationDuration=(2.5+Math.random()*2)+"s";
+  el.style.transform="rotate("+Math.random()*360+"deg)";
+  document.body.appendChild(el);
+  el.addEventListener("animationend",()=>el.remove(),{once:true});
+ }
+}
+
+cutBtn.addEventListener("click",()=>{
+ const isCut=cakeArea.classList.toggle("cake-cut");
+ cutBtn.textContent=isCut?"💖 কেক কাটা হয়েছে!":"🎂 কেক কাটো!";
+ if(isCut){confetti(90);hearts(20);}
+});
+
+letterBtn.addEventListener("click",()=>{
+ const isOpen=letter.classList.toggle("show");
+ letterBtn.textContent=isOpen?"💌 চিঠি বন্ধ করো":"💌 চিঠি খোলো";
+ if(isOpen){hearts(12);letter.scrollIntoView({behavior:"smooth",block:"nearest"});}
+});
+
+document.getElementById("magicBtn").addEventListener("click",()=>{
+ confetti(130);
+ hearts(30);
+});
+
+window.addEventListener("load",()=>setTimeout(()=>hearts(10),500));
+</script>
+</body>
+    </html>
